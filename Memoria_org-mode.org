@@ -18,7 +18,7 @@
 #+LaTeX_HEADER: \sectionfont{\MakeUppercase} % Las secciones deben estar en mayúsculas
 #+LaTeX_HEADER: \bibliography{\jobname}
 
-#+LaTeX_HEADER: \Director{Jorge Dávila Muro}
+#+LaTeX_HEADER: \Director{Nombre del Director}
 #+LaTeX_HEADER: %\Lugar{Bilbao} % Por omisión: Madrid
 #+LaTeX_HEADER: %\Grado{Graduado en Matemáticas e Informática} % Por omisión: Graduado en Ingeniería Informática
 #+LaTeX_HEADER: %\Trabajo{TRABAJO FIN DE MÁSTER} % Por omisión: TRABAJO FIN DE GRADO
