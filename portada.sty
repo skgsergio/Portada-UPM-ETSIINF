@@ -1,0 +1,102 @@
+\ProvidesPackage{portada}
+\RequirePackage{xcolor}
+\RequirePackage{changepage}
+\RequirePackage{eso-pic}
+\RequirePackage{geometry}
+
+\definecolor{PortadaBlue}{HTML}{31489F}
+
+\def\director{Falta \textbackslash{Director\{Nombre de tu director\}}}
+
+\newcommand\Director[1]{
+  \def\director{#1}
+}
+
+\def\lugar{Madrid}
+
+\newcommand\Lugar[1]{
+  \def\lugar{#1}
+}
+
+\def\grado{Graduado en Ingeniería Informática}
+
+\newcommand\Grado[1]{
+  \def\grado{#1}
+}
+
+\def\trabajo{TRABAJO FIN DE GRADO}
+
+\newcommand\Trabajo[1]{
+  \def\trabajo{#1}
+}
+
+\renewcommand*{\maketitle}{\begin{titlepage}
+    \AddToShipoutPicture*{
+      \put(-36,0){
+        \parbox[b][\paperheight]{\paperwidth}{
+          \vfill
+          \centering
+          \includegraphics[width=1.1\paperwidth,height=1\paperheight]{portada/portada.png}
+          \vfill
+        }
+      }
+    }
+
+    \newgeometry{inner=1.5cm,outer=1.5cm,top=1.5cm,bottom=1.5cm}
+
+    \begin{figure}
+      \begin{minipage}{.5\linewidth}
+        \begin{flushleft}
+          \includegraphics[scale=1]{portada/upm.png}
+        \end{flushleft}
+      \end{minipage}
+      \begin{minipage}{.5\linewidth}
+        \begin{flushright}
+          \includegraphics[scale=0.185]{portada/etsiinf.png}
+        \end{flushright}
+      \end{minipage}
+    \end{figure}
+
+    \vspace*{1cm}
+
+    \begin{center}
+      {\color{PortadaBlue}
+        {\LARGE\bf \grado}\\[1.5cm]
+        {\LARGE Universidad Politécnica de Madrid}\\[0.2cm]
+        {\LARGE Escuela Técnica Superior de\\Ingenieros Informáticos}\\[1.5cm]
+        {\LARGE\bf \trabajo}\\[1.5cm]
+
+        {\LARGE\bfseries{\@title}}
+
+      }
+    \end{center}
+
+
+    \AddToShipoutPictureFG*{
+      \put(\LenToUnit{0.50\paperwidth},\LenToUnit{0.28\paperheight}){
+        \vtop{{\null}\makebox[0pt][c]{
+            \color{PortadaBlue}
+            \begin{tabular}{rl}
+              \LARGE Autor: & \LARGE \@author \\[0.5cm]
+              \LARGE Director: & \LARGE \director
+            \end{tabular}
+        }}
+      }
+    }
+
+    \AddToShipoutPictureFG*{
+      \put(\LenToUnit{0.70\paperwidth},\LenToUnit{0.12\paperheight}){
+        \vtop{{\null}\makebox[0pt][c]{
+            \color{PortadaBlue}
+            \LARGE\MakeUppercase{\lugar, \@date}
+        }}
+      }
+    }
+
+    \restoregeometry
+
+    \ClearShipoutPicture
+  \end{titlepage}
+
+  \newpage
+}

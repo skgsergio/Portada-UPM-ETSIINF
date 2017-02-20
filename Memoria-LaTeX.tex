@@ -1,0 +1,76 @@
+o\documentclass[a4paper, 12pt]{article} % La fuente debe ser de 12pt
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage[left=3cm, right=3cm, top=3.5cm, bottom=3.5cm]{geometry} % Márgenes recomendados
+\usepackage{times} % La fuente debe ser Times New Romans
+\usepackage[english, spanish, es-noshorthands, es-tabla]{babel}
+\usepackage[spanish]{translator}
+\usepackage[style=ieee, backend=biber]{biblatex} % Bibliografía en formato IEEE
+\usepackage{sectsty}
+\usepackage{portada}
+
+\sectionfont{\MakeUppercase} % Las secciones deben estar en mayúsculas
+\bibliography{\jobname}
+
+\Director{Nombre del Director}
+%\Lugar{Bilbao} % Por omisión: Madrid
+%\Grado{Graduado en Matemáticas e Informática} % Por omisión: Graduado en Ingeniería Informática
+%\Trabajo{TRABAJO FIN DE MÁSTER} % Por omisión: TRABAJO FIN DE GRADO
+
+\author{Nombre del Alumno}
+\date{Enero de 2017}
+\title{Título del trabajo}
+
+\begin{document}
+\maketitle
+\null%
+\newpage
+
+\pagenumbering{roman} % La numeración debe ser romana hasta la primera sección
+\tableofcontents
+\newpage
+
+\listoffigures
+\listoftables
+\newpage
+
+% Abstract después de los índices en Español
+\begin{abstract}
+  \normalsize
+  Aquí el texto del abstract.
+
+  \textbf{Palabras clave:} palabra 1, palabra 2, palabra 3\ldots
+\end{abstract}
+
+% Abstract en Inglés
+\begin{otherlanguage}{english}
+  \begin{abstract}
+    \normalsize
+    Here goes the abstract text.
+
+    \textbf{Keywords:} keyword 1, keyword 2, keyword 3\ldots
+  \end{abstract}
+\end{otherlanguage}
+
+\newpage
+\pagenumbering{arabic} % Iniciamos la numeración árabe en la primera sección
+
+\section{Introducción}
+
+\section{Estado del arte}
+
+\section{Otra sección}
+
+\subsection{Una subsección}
+
+\subsubsection{Otra subsección}
+
+\section{Resultados y conclusiones}
+
+\subsection{Pruebas}
+
+\subsection{Conclusiones}
+
+\printbibliography[heading=bibnumbered] % Última sección, numerada, para la bibliografía
+\end{document}

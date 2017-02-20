@@ -1,0 +1,75 @@
+#+TITLE: Título del trabajo
+#+AUTHOR: Nombre del Alumno
+#+DATE: Enero de 2017
+#+LANGUAGE: es
+#+OPTIONS: ^:{} toc:nil
+#+STARTUP: showall
+
+#+LaTeX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [a4paper, 12pt]
+#+LaTeX_HEADER: \usepackage[left=3cm, right=3cm, top=3.5cm, bottom=3.5cm]{geometry} % Márgenes recomendados
+#+LaTeX_HEADER: \usepackage{times} % La fuente debe ser Times New Romans
+#+LaTeX_HEADER: \usepackage[english, spanish, es-noshorthands, es-tabla]{babel}
+#+LaTeX_HEADER: \usepackage[spanish]{translator}
+#+LaTeX_HEADER: \usepackage[style=ieee, backend=biber]{biblatex} % Bibliografía en formato IEEE
+#+LaTeX_HEADER: \usepackage{sectsty}
+#+LaTeX_HEADER: \usepackage{portada}
+
+#+LaTeX_HEADER: \sectionfont{\MakeUppercase} % Las secciones deben estar en mayúsculas
+#+LaTeX_HEADER: \bibliography{\jobname}
+
+#+LaTeX_HEADER: \Director{Jorge Dávila Muro}
+#+LaTeX_HEADER: %\Lugar{Bilbao} % Por omisión: Madrid
+#+LaTeX_HEADER: %\Grado{Graduado en Matemáticas e Informática} % Por omisión: Graduado en Ingeniería Informática
+#+LaTeX_HEADER: %\Trabajo{TRABAJO FIN DE MÁSTER} % Por omisión: TRABAJO FIN DE GRADO
+
+#+BEGIN_EXPORT latex
+\null%
+\newpage
+
+\pagenumbering{roman} % La numeración debe ser romana hasta la primera sección
+\tableofcontents
+\newpage
+
+\listoffigures
+\listoftables
+\newpage
+#+END_EXPORT
+
+#+BEGIN_abstract
+% Abstract después de los índices en Español
+\normalsize
+Aquí el texto del abstract.
+
+*Palabras clave:* palabra 1, palabra 2, palabra 3...
+#+END_abstract
+
+#+LATEX: \begin{otherlanguage}{english}
+#+BEGIN_abstract
+\normalsize
+Here goes the abstract text.
+
+*Keywords:* keyword 1, keyword 2, keyword 3\ldots
+#+END_abstract
+#+LaTeX: \end{otherlanguage}
+
+#+LaTeX: \newpage
+#+LaTeX: \pagenumbering{arabic}% Iniciamos la numeración árabe en la primera sección
+
+* Introducción
+
+* Estado del arte
+
+* Otra sección
+
+** Una subsección
+
+** Otra subsección
+
+* Resultados y conclusiones
+
+** Pruebas
+
+** Conclusiones
+
+#+LaTeX: \printbibliography[heading=bibnumbered] % Última sección, numerada, para la bibliografía
