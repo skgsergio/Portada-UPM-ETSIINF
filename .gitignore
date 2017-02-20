@@ -10,7 +10,6 @@
 *.lof
 *.log
 *.lot
-*.pdf
 *.run.xml
 *.toc
-
+*.out

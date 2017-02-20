@@ -37,7 +37,6 @@
 #+END_EXPORT
 
 #+BEGIN_abstract
-% Abstract después de los índices en Español
 \normalsize
 Aquí el texto del abstract.
 
@@ -57,6 +56,13 @@ Here goes the abstract text.
 #+LaTeX: \pagenumbering{arabic}% Iniciamos la numeración árabe en la primera sección
 
 * Introducción
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus
+  malesuada volutpat. Nam id tortor purus. Aliquam sit amet felis ipsum. Nullam
+  ac ante tempus, dignissim dolor a, aliquet nunc. In hac habitasse platea
+  dictumst. In ac lacus sit amet velit fringilla pharetra. Duis at cursus
+  erat. Curabitur sed pellentesque lacus. Aliquam sit amet est nec nisl cursus
+  varius. Sed pharetra ac neque quis imperdiet. Quisque ac tortor enim. Sed
+  dignissim blandit orci, id fermentum lorem commodo eget\cite{Recos}.
 
 * Estado del arte
 
